@@ -1,11 +1,16 @@
 {
   "name": "ECHYO",
-  "description": "sends a yo back from a yo endpoint callback",
+  "description": "yo autoresponder",
   "author": "AJ Nadel <ajnade@nuevaschool.org>",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "app.js",
-  "engines": {
-    "node": ">= 0.10.32"
+  "node": "0.10.32",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AJNDL/echyo"
   },
   "dependencies": {
     "express": "^4.9.8",
