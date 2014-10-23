@@ -2,10 +2,11 @@ var express = require('express')
 var app = express()
 var yo = require('./yoAPI.js')
 
-var apiToken = ''; // Yo API Token here (from dev.justyo.co)
+var secret = '' // add special random thing here to attempt to prevent unauthorized access
+var apiToken = '' // Yo API Token here (from dev.justyo.co)
 
 app.set('port', (process.env.PORT || 5000))
-app.get('/callback', function(req, res){
+app.get('/callback-'+secret, function(req, res){
 	var username = req.query.username
 	if (!username){
 		console.log('no username')
@@ -30,7 +31,7 @@ app.get('/', function(req, res){
 })
 
 app.use('*', function(req, res){
-	res.status(404).end()
+	res.status(400).end()
 })
 
 app.listen(app.get('port'), function(){
