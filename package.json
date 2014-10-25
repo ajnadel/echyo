@@ -13,7 +13,7 @@
     "url": "https://github.com/AJNDL/echyo"
   },
   "dependencies": {
-    "express": "^4.9.8",
-    "request": "*"
+    "express": "4.x",
+    "request": "2.x"
   }
 }
